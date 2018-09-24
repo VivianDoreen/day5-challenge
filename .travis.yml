@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.4"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+# command to run tests
+script: 
+  - python3 -m pytest --cov=account
+after_success:
+  - coveralls
