@@ -4,6 +4,7 @@ withdrawals, and deposits of money.
 """
 class BankAccount(object):
     "Implementing methods that enable operation of the bank"
+    balance  = 0
     def __init__(self, name):
         self.flag = 1
         self.name = name
@@ -50,3 +51,7 @@ class BankAccount(object):
         #close account 
         self.flag = 0
         return self.flag
+if __name__ == '__main__':
+    user_account = BankAccount('Vivian')
+    print(user_account.deposit(100000))
+    print(user_account.withdraw(50000))
