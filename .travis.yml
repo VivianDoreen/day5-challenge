@@ -9,5 +9,5 @@ install:
 script: 
   - python3 -m pytest --cov 
 after_success:
-  - coveralls
+  # - coveralls
   - coverage report
