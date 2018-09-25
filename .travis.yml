@@ -5,6 +5,7 @@ python:
 install:
   - pip install -r requirements.txt
 # command to run tests
-script: pytest --cov
+script: pytest --cov=account
 after_success:
   - coveralls
+  - coverage report
